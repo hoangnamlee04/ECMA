@@ -1,7 +1,7 @@
 const Advertisement = function () {
-  return `
-    <h3>Ads</h3>
-  `
+    return `
+      <h3>Ads</h3>
+    `
 }
 
 export default Advertisement;
