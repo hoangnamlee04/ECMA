@@ -20,8 +20,21 @@ html {
 .sidebar ul li {
   @apply text-xs py-1;
 }
+.sidebar ul li {
+ font-size: 17px;
+}
+.sidebar ul li:hover {
+  color: #1a94ff;
+  /* border-bottom: 2px solid #1a94ff; */
+ }
+ .sidebar h3 {
+  font-size: 18px
+ }
 .tabs-option ul li {
   @apply p-6;
+}
+.tabs-option ul li:hover {
+  border-bottom: 4px solid #0d5cb6;
 }
 .tabs-option .tab-line {
   position: absolute;

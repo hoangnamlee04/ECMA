@@ -3,7 +3,7 @@ const Slider = {
       return `
       <div class="slide h-[285px] relative">
       <img
-        src="/img/slide1.png"
+        src="/slider.png"
         alt=""
         class="max-h-full min-w-full object-cover"
       />
