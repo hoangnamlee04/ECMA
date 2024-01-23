@@ -1,11 +1,131 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-footer ul li {
-    color:#808089;
-    font-size: 12px;
-    padding: 4px 0;
+html {
+  font-family: "Roboto";
+  color: #fff;
+}
+.bg-primary {
+  background-color: #1a94ff;
+}
+.bg-btn {
+  background-color: #0d5cb6;
+}
+.color-text {
+  color: #242424;
+}
+.color-price {
+  color: #ff424e;
+}
+.sidebar ul li {
+  @apply text-xs py-1;
+}
+.tabs-option ul li {
+  @apply p-6;
+}
+.tabs-option .tab-line {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: -2px;
+  background-color: #0d5cb6;
+  transition: all 0.2s ease;
+}
+.tab-items.active {
+  color: #0d5cb6;
+}
+.slide:hover .btn-slide {
+  display: flex;
+}
+.btn-slide {
+  display: none;
+}
+.btn-slide .prev,
+.btn-slide .next {
+  @apply w-8 h-8 rounded-full;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+}
+.similar-list ul li {
+  min-width: 213px;
+  max-width: 213px;
+  cursor: pointer;
+}
+.similar-list ul li h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.similar-list ul li + li {
+  padding-right: 12px;
+}
+.similar-list:hover ~ .btn-similar,
+.btn-similar:hover {
+  display: flex;
+}
+
+.btn-similar {
+  display: none;
+}
+.btn-similar .prev,
+.btn-similar .next {
+  @apply w-8 h-8 rounded-full;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+}
+.btn-similar .prev {
+  position: absolute;
+  left: 0;
+}
+.btn-similar .prev:active {
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+.btn-similar .next {
+  position: absolute;
+  right: 0;
+}
+.btn-similar .next:active {
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+.ablum ul li {
+  max-width: 62px;
+  max-height: 62px;
+  margin: 0 2px;
+}
+.ablum ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.description ul li {
+  padding: 10.5px 0;
 }
 footer h3 {
-    font-size: 16px;
+  color: #000 !important;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+footer ul li {
+  color: #808089;
+  font-size: 11px;
+  padding: 4px 0;
+}
+.footer-bottom {
+  border-top: 1px solid #ebebf0;
+}
+.carousel {
+  transition: all 0.5s ease;
 }

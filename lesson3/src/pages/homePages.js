@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 const HomePage = {
   render: (books) => {
     return `
-    ${Header.render()}
+    ${Header()}
        <main class="mt-10 bg-white color-text">
          <div class="max-w-screen-xl mx-auto pt-[14px] flex pb-16">
            <!--start Sidebar -->
@@ -30,16 +30,8 @@ const HomePage = {
            <!--end content -->
          </div>
        </main>
-     ${Footer.render()}      
+     ${Footer()}      
      `;
-  },
-  afterRender: () => {
-    let components = [Header, Slider, Sidebar, Tabs, Products, Footer];
-    components.forEach((component) => {
-      if (component.afterRender) {
-        component.afterRender();
-      }
-    });
-  },
+  }
 };
 export default HomePage;

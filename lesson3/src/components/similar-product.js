@@ -67,34 +67,6 @@ const SimilarProduct = {
         </div>
       </div>
     </div>`;
-  },
-  afterRender: () => {
-    let currentCarousel = 0;
-    let widthItemCarousel = 213;
-    let btnNext = document.querySelector(".btn-similar .next");
-    let btnPrev = document.querySelector(".btn-similar .prev");
-    const carousel = document.querySelector(".similar-list .carousel");
-    const itemCarousel = document.querySelectorAll(
-      ".similar-list .carousel li"
-    );
-    let maxItem = itemCarousel.length - 6;
-    console.log(itemCarousel.length);
-    btnNext.style.display = itemCarousel.length <= 6 ? "none" : "inline-block";
-    btnPrev.style.display = currentCarousel == 0 ? "none" : "inline-block";
-    btnNext.addEventListener("click", (e) => {
-      currentCarousel++;
-      let width = currentCarousel * widthItemCarousel + "px";
-      carousel.style.transform = `translate(-${width},0)`;
-      btnPrev.style.display = currentCarousel == 0 ? "none" : "inline-block";
-      btnNext.style.display = currentCarousel == 3 ? "none" : "inline-block";
-    });
-    btnPrev.addEventListener("click", (e) => {
-      currentCarousel--;
-      let width = currentCarousel * widthItemCarousel + "px";
-      carousel.style.transform = `translate(-${width},0)`;
-      btnNext.style.display = currentCarousel == 3 ? "none" : "inline-block";
-      btnPrev.style.display = currentCarousel == 0 ? "none" : "inline-block";
-    });
-  },
+  }
 };
 export default SimilarProduct;

@@ -48,12 +48,12 @@ const Footer = function () {
           <ul class="flex">
             <li class="">
               <a href=""
-                ><img src="./public/chungnhan.png" alt=""
+                ><img src="/chungnhan.png" alt=""
               /></a>
             </li>
             <li class="px-2">
               <a href=""
-                ><img src="./public/img/footer/certification2.png" alt=""
+                ><img src="/img/footer/certification2.png" alt=""
               /></a>
             </li>
           </ul>
@@ -61,43 +61,43 @@ const Footer = function () {
         <div class="payment-methods">
           <h3>Phương thức thanh toán</h3>
           <ul class="grid grid-cols-5 gap-2">
-            <li><img src="./public/img/footer/payment1.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment2.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment3.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment4.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment5.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment6.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment7.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment8.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment9.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment10.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment11.png" alt="" /></li>
-            <li><img src="./public/img/footer/payment12.png" alt="" /></li>
+            <li><img src="/img/footer/payment1.png" alt="" /></li>
+            <li><img src="/img/footer/payment2.png" alt="" /></li>
+            <li><img src="/img/footer/payment3.png" alt="" /></li>
+            <li><img src="/img/footer/payment4.png" alt="" /></li>
+            <li><img src="/img/footer/payment5.png" alt="" /></li>
+            <li><img src="/img/footer/payment6.png" alt="" /></li>
+            <li><img src="/img/footer/payment7.png" alt="" /></li>
+            <li><img src="/img/footer/payment8.png" alt="" /></li>
+            <li><img src="/img/footer/payment9.png" alt="" /></li>
+            <li><img src="/img/footer/payment10.png" alt="" /></li>
+            <li><img src="/img/footer/payment11.png" alt="" /></li>
+            <li><img src="/img/footer/payment12.png" alt="" /></li>
           </ul>
           <h3 class="mt-8">Dịch vụ giao hàng</h3>
           <ul class="pt-3">
-            <li><img src="./public/img/footer/ship.png" alt="" /></li>
+            <li><img src="/img/footer/ship.png" alt="" /></li>
           </ul>
         </div>
         <div class="connect">
           <h3>Kết nối với chúng tôi</h3>
           <ul class="flex mb-8">
-            <li><img src="./public/img/footer/connect1.png" alt="" /></li>
+            <li><img src="/img/footer/connect1.png" alt="" /></li>
             <li class="px-2">
-              <img src="./public/img/footer/connect2.png" alt="" />
+              <img src="/img/footer/connect2.png" alt="" />
             </li>
-            <li><img src="./public/img/footer/connect3.png" alt="" /></li>
+            <li><img src="/img/footer/connect3.png" alt="" /></li>
           </ul>
           <h3>Tải ứng dụng trên điện thoại</h3>
           <div class="flex">
-            <img src="./public/img/footer/connect4.png" alt="" />
+            <img src="/img/footer/connect4.png" alt="" />
             <div class="ml-4">
               <img
                 class="pb-4"
-                src="./public/img/footer/connect5.png"
+                src="/img/footer/connect5.png"
                 alt=""
               />
-              <img src="./public/img/footer/connect6.png" alt="" />
+              <img src="/img/footer/connect6.png" alt="" />
             </div>
           </div>
         </div>

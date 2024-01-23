@@ -14,21 +14,6 @@ const Tabs = {
       <span class="tab-line"></span>
     </div>
       `;
-    },
-    afterRender: () => {
-      const tabs = document.querySelectorAll(".tab-items a");
-      const tabActive = document.querySelector(".tab-items.active a");
-      const tabLine = document.querySelector(".tabs-option .tab-line");
-      tabLine.style.left = tabActive.offsetLeft + "px";
-      tabLine.style.width = tabActive.offsetWidth + "px";
-      tabs.forEach((tab) => {
-        tab.onclick = function (e) {
-          document.querySelector(".tab-items.active").classList.remove("active");
-          tabLine.style.left = this.offsetLeft + "px";
-          tabLine.style.width = this.offsetWidth + "px";
-          this.closest(".tab-items").classList.add("active");
-        };
-      });
-    },
+    }
   };
   export default Tabs;

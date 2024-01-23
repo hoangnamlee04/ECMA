@@ -5,7 +5,7 @@ const Header = function () {
   <div class="max-w-screen-xl mx-auto flex justify-between">
   <a href="/">
     <img
-      src="./public/logo.png"
+      src="/logo.png"
       alt=""
       class="pt-4 pb-[21px] grow-0 mr-[123px] max-w-[80px]"
     /></a>
