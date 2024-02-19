@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   font-family: "Roboto";
   color: #fff;
@@ -20,21 +21,11 @@ html {
 .sidebar ul li {
   @apply text-xs py-1;
 }
-.sidebar ul li {
- font-size: 17px;
-}
 .sidebar ul li:hover {
-  color: #1a94ff;
-  /* border-bottom: 2px solid #1a94ff; */
- }
- .sidebar h3 {
-  font-size: 18px
- }
+  color: #0d5cb6;
+}
 .tabs-option ul li {
   @apply p-6;
-}
-.tabs-option ul li:hover {
-  border-bottom: 4px solid #0d5cb6;
 }
 .tabs-option .tab-line {
   position: absolute;
@@ -123,8 +114,9 @@ html {
   height: 100%;
   object-fit: cover;
 }
-.description ul li {
+.description .list-desc p {
   padding: 10.5px 0;
+  font-size: 14px;
 }
 footer h3 {
   color: #000 !important;
@@ -141,4 +133,101 @@ footer ul li {
 }
 .carousel {
   transition: all 0.5s ease;
+}
+.loader-dots div {
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.loader-dots div:nth-child(1) {
+  left: 8px;
+  animation: loader-dots1 0.6s infinite;
+}
+.loader-dots div:nth-child(2) {
+  left: 8px;
+  animation: loader-dots2 0.6s infinite;
+}
+.loader-dots div:nth-child(3) {
+  left: 32px;
+  animation: loader-dots2 0.6s infinite;
+}
+.loader-dots div:nth-child(4) {
+  left: 56px;
+  animation: loader-dots3 0.6s infinite;
+}
+.aside-admin li:hover button {
+  @apply hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85];
+}
+.aside-admin li.active button {
+  @apply shadow-blue-500/20 shadow-md bg-gradient-to-tr from-gray-100 to-gray-50;
+}
+@keyframes loader-dots1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-dots3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-dots2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+.checkbox:checked + .check-icon {
+  display: flex;
+}
+.btn-Admin div div {
+  cursor: pointer;
+}
+.pagination-admin {
+  transition: all 2s ease;
+}
+.pagination-admin li {
+  cursor: pointer;
+}
+.pagination-admin li.active {
+  @apply border-blue-600 bg-blue-600 text-white;
+}
+form input.error,
+form textarea.error {
+  @apply border-red-500;
+}
+form input.success,
+form textarea.success {
+  @apply border-green-500;
+}
+form p {
+  display: none;
+}
+form input.error ~ p,
+form textarea.error ~ p {
+  display: block;
+}
+form input.succes ~ p,
+form textarea.succes ~ p {
+  display: none;
+}
+ul li.categories:hover .submenu,
+ul li.authors:hover .submenu {
+  display: block;
+}
+
+.submenu::after {
+  position: absolute;
+  right: -18px;
+  top: 5px;
+  content: "";
+  border-width: 10px; /* độ dài cạnh của mũi tên */
+  border-style: solid;
+  border-color: transparent transparent transparent #acacac;
 }

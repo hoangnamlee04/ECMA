@@ -1,9 +1,17 @@
 import { printf, router } from "./ultilities";
-import { books } from "../db.json" assert {type:'json'};
+// import "toastify-js/src/toastify.css";
 import HomePage from "./pages/homePages";
 import DetailProductPage from "./pages/detailProduct";
-import Products from "./components/products";
-
-router.on("/",() => printf('#app',HomePage.render(books)))
-router.on('/book/detail/:id',(data)=>printf('#app',DetailProductPage.render(books,data.data.id)))
+import Dashboard from "./pages/dashboard";
+import newBookPage from "./pages/newBookPages";
+import UpdateBookPages from "./pages/updateBookPage";
+router.on({
+  "/": () => printf("#app", () => HomePage.render()),
+  "/book/detail/:categories/:id": ({ data }) =>
+    printf("#app", () => DetailProductPage.render(data.categories, data.id)),
+  "/admin": () => printf("#app", () => Dashboard()),
+  "/admin/new-book": () => printf("#app", newBookPage),
+  "/admin/update-book/:id": ({ data }) =>
+    printf("#app", () => UpdateBookPages(data.id)),
+});
 router.resolve();

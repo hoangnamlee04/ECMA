@@ -1,21 +1,32 @@
-import { Formatter } from "../ultilities";
+import { Formatter, loading, useState, useEffect } from "../ultilities";
+import { isEmpty } from "lodash";
 const ProductDetail = {
-  render: (books, id) => {
-    let book = books[id];
-    let ablum = "";
-    book.images.forEach((image) => {
-      ablum += `<li>
-      <img
-        src="${image.small_url}"
-        alt=""
-      />
-    </li>`;
+  render: (id) => {
+    const [book, setBook] = useState({});
+    useEffect(async () => {
+      const data = await (
+        await fetch(`http://localhost:3000/books?id=${id}`)
+      ).json();
+      setBook(data[0]);
+    }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+      let ablums = document.querySelectorAll(".ablum ul li img");
+      let ablumPrimary = document.querySelector("#ablum-primary");
+      ablums.forEach((ablum, i) => {
+        ablum.addEventListener("click", () => {
+          ablumPrimary.src = ablum.src;
+        });
+      });
     });
+    if (isEmpty(book)) {
+      return loading();
+    }
     return ` <div class="product-detail flex mb-14">
     <div class="ablum max-w-[444px] mr-7">
       <div class="image-primary max-h-[444px] relative">
-        <img
-          src="${book.images[0].medium_url}"
+        <img id="ablum-primary" class="min-width-full min-h-ful"
+          src="${book?.images?.[0]?.medium_url || ""}"
           alt=""
         />
         <div
@@ -26,12 +37,21 @@ const ProductDetail = {
         </div>
       </div>
       <ul class="flex mt-4 cursor-pointer">
-        ${ablum}
+      ${book?.images
+        ?.map((image) => {
+          return `<li>
+        <img
+          src="${image.small_url || ""}"
+          alt=""
+        />
+      </li>`;
+        })
+        .join("")}
       </ul>
     </div>
     <div class="productContent grow">
       <h2 class="color-text text-[23px] mb-1 mt-11">
-        ${book.name}
+        ${book.name || ""}
       </h2>
       <div class="review flex items-center text-sm">
         <div class="start">
@@ -51,10 +71,10 @@ const ProductDetail = {
         class="price flex items-end pt-[12px] pb-[51px] pl-[16px] bg-[#FAFAFA] mt-4 grow"
       >
         <h3 class="text-[32px] color-price"><span>${Formatter.format(
-          book.list_price
+          book?.list_price || ""
         )}</span> ₫</h3>
         <p class="pl-2 text-[#808089] text-[13px]">
-          <span>${Formatter.format(book.original_price)}</span> ₫
+          <span>${Formatter.format(book?.original_price) || ""}</span> ₫
         </p>
         <span
           class="sale ml-[8px] px-[3px] leading-4 border-[1px] border-[#FF424E] rounded-sm max-h-[16px] bg-[#FFF0F1] text-[#FF424E]"
