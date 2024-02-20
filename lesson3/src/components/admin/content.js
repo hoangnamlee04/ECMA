@@ -19,6 +19,7 @@ import {
         `http://localhost:3000/books?_page=${infoPage.currentPage}&_limit=10`
       );
       const data = await response.json();
+      console.log(response.headers)
       const headerLink = parseLinkHeaders(response.headers.get("Link"));
       setInfoPage((prev) => ({ ...prev, ...headerLink }));
       setHtmlPages(renderPages(headerLink));
