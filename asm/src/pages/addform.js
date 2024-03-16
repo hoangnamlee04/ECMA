@@ -52,9 +52,9 @@ const addForm = function () {
 
 
     return /*html*/`
-      <section class="bg-gray-100 mt-3">
+      <section class="bg-gray-300">
 
-            <h2 class="text-2xl font-bold text-center pt-6">Thêm mới loại sách</h2>
+            <h2 class="text-2xl font-bold text-left ml-44 pt-6 mt-18">Thêm mới loại sách</h2>
 
 
             <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -142,17 +142,7 @@ const addForm = function () {
 
                         </div>
 
-                        <div>
-                            <label class="sr-only" for="bookImage">Ảnh :</label>
-                                <input
-                                    class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                                    placeholder="Ảnh sách"
-                                    type="text"
-                                    name="book_image"
-                                  
-                                    required
-                                />
-                        </div>
+                       
 
                         <div class="mt-4">
                             <button
